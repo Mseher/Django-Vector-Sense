@@ -1,0 +1,28 @@
+Run the follwoing queries in postgresql to create a trigger function that will update the geometry automatically upon adding new address each time in django_blog_useraddress table. 
+
+-- Step 1: Create the PostGIS extension if not already installed
+CREATE EXTENSION IF NOT EXISTS postgis;
+
+-- Step 2: Add the geom column to the django_blog_useraddress table
+ALTER TABLE django_blog_useraddress
+ADD COLUMN geom geometry(Point, 4326);
+
+-- Step 3: Create the trigger function to automatically populate the geom column
+CREATE OR REPLACE FUNCTION add_geometry()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    NEW.geom = ST_SetSRID(ST_MakePoint(NEW.longitude, NEW.latitude), 4326);
+    RETURN NEW;
+END;
+$$;
+
+-- Step 4: Create the trigger to execute the add_geometry function before INSERT
+CREATE OR REPLACE TRIGGER insert_geometry_trigger
+BEFORE INSERT ON django_blog_useraddress
+FOR EACH ROW
+EXECUTE FUNCTION add_geometry();
+
+-- Step 5: Insert a new address and check
+SELECT * FROM django_blog_useraddress

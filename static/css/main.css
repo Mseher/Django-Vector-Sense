@@ -1,0 +1,247 @@
+/*this file contain the styling of base.html present in django_blof templates*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ header li, header a{
+	  font-family: roboto,sans-serif;
+	  font-size: 16px !important;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  margin: 20px 70px 1px 70px;
+	padding: 10px 2%;
+	background-color: #006241;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.logo{
+	cursor: pointer;
+}
+
+.logo img{
+	width: 150px; 
+	height: 100px;
+}
+
+.alert{
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin: 0px 70px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.nav__links{
+	list-style: none;
+}
+
+.nav__links li{
+	display: inline-block;
+	padding: 15px 10px 0px 10px;
+}
+
+.nav__links li a{
+	transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+	text-decoration: none !important;
+  border-radius: 10px;
+}
+
+.nav__links li a:hover {
+    color: #006241;
+    background-color: #69B65F;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px !important;
+}
+
+.nav__links li:not(:last-child)::after {
+  display: inline-block;
+  content: '';
+  width: 1px;
+  height: 20px;
+  background-color: #EDF4FC;
+  margin-left: 30px;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+.sidenav-item {
+  border: 2px solid white;
+  color: white;
+  margin: 5px 5px;
+  border-radius: 10px;
+  background-color: #006241;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.sidenav-item a {
+  padding: 5px 5px;
+  text-decoration: none !important;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.sidenav-item:hover {
+  background-color: #69B65F;
+  border: none;
+}
+
+.sidenav-item a:hover {
+  color: #006241 !important;
+  font-size: 18px !important;
+}
+
+.nav-link{
+  font-size: 16px !important;
+  height: 38px !important;
+  width: auto;
+  padding: 6px 10px !important;
+}
+/*Footer container */
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 70px 0px 70px;
+}
+
+/* Contact us section */
+footer .contact h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 25px;
+  color: #006241;
+}
+
+footer .contact-section {
+  background-color: rgba(105, 182, 95, 0.8);
+  color: #006241;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .contact-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #006241;
+}
+
+footer .contact-section li {
+  display: flex;
+  width: 100%;
+  color: #006241;
+}
+
+footer .contact-section a {
+  text-decoration: none;
+  color: #006241;
+}
+
+footer .contact-section a:hover {
+  text-decoration: underline;
+}
+
+
+/* Find us section */
+footer .col-lg-4 h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006241;
+}
+
+footer .paragraph--type--map-and-address {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  color: #006241;
+}
+
+footer .paragraph--type--map-and-address h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  color: #006241;
+}
+
+footer .paragraph--type--map-and-address address {
+  margin-bottom: 0.5rem;
+  color: #006241;
+}
+
+footer .paragraph--type--map-and-address a {
+  color: rgba(38, 45, 55, 0.9);
+  font-weight: bold;
+  color: #006241;
+}
+
+/* dividing section line */
+.section-divider {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  margin: 1.5rem 0;
+} 
+
+/*social media icons*/
+.socialmedia-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: #006241;
+}
+
+.text-body-copy {
+  font-weight: bold;
+  font-size: 20px;
+  color: #006241;
+}
+
+.social-icon {
+  color: #006241;
+  transition: color 0.2s;
+  text-decoration: none !important;
+  margin: 0 15px;
+  font-size: 30px; /* Increase the size of icons */
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  color: rgba(0, 98, 65, 0.6);
+}
+
+
+#block-copyrightinfo {
+    background-color:  #006241;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    margin: 0px 70px 20px 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#block-copyrightinfo a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#block-copyrightinfo a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-light {
+    color: #fff;
+    margin-bottom: 0;
+}
